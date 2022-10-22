@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: white;
+  }
+/* Header/Blog Title */
+.header {
+
+    padding: 30px;
+    font-size: 60px;
+    text-align: center;
+
+
+  }
+  /* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  .card1:hover,.card2:hover,.card3:hover{
+    background-color: aquamarine;
+  }
+  /* Fake image */
+.fakeimg {
+    border-radius: 5px;
+    background-color: #aaa;
+    width: 50%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card,.card1,.card2,.card3,.card-about {
+    /* background-color: white; */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 1px solid lightgray;
+   
+ 
+  }
+  .icon{
+   
+    flex-wrap: wrap;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .card-about:hover{
+    background-color: red;
+    animation-name:about-anm ;
+    animation-duration: 200ms ;
+    animation-fill-mode: forwards;
+}
+@keyframes about-anm{
+    to{
+        transform: rotate(3deg);
+    }
+}
+
+  /* Footer */
+.footer {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+
+    
+  }
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }  
+
+
